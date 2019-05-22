@@ -1,7 +1,7 @@
 # Player
 extends KinematicBody2D
 
-var test = 1000
+var test = 9999
 
 # Var
 const UP = Vector2(0, -1)
