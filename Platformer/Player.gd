@@ -1,6 +1,8 @@
 # Player
 extends KinematicBody2D
 
+var test = 1000
+
 # Var
 const UP = Vector2(0, -1)
 const GRAVITY = 20
