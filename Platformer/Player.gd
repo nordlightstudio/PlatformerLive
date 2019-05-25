@@ -12,8 +12,16 @@ var motion = Vector2()
 var friction = false
 var testVariable = true
 
+#Add Coin from GoldCoin scene
+var goldCoin = 0
+onready var goldCoins = $UI/CenterContainer/VBoxContainer/GoldCoin
+
 # Physic Process
 func _physics_process(delta):
+	
+	#Übergabe var goldCoin an UI
+	goldCoins.text = str("Gold Coins: ", goldCoin)
+	
 	
 	motion.y += GRAVITY
 	

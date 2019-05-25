@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://DirtAutoTiles.tres" type="TileSet" id=1]
-[ext_resource path="res://Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://GoldCoin.tscn" type="PackedScene" id=2]
 
 [node name="World" type="Node"]
 
@@ -13,5 +13,20 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 186.448, 591.616 )
+[node name="GoldCoin2" type="Node" parent="."]
+editor/display_folded = true
+
+[node name="GoldCoin" parent="GoldCoin2" instance=ExtResource( 2 )]
+position = Vector2( 631, 560 )
+
+[node name="GoldCoin2" parent="GoldCoin2" instance=ExtResource( 2 )]
+position = Vector2( 855, 433 )
+
+[node name="GoldCoin3" parent="GoldCoin2" instance=ExtResource( 2 )]
+position = Vector2( 1044, 237 )
+
+[node name="GoldCoin4" parent="GoldCoin2" instance=ExtResource( 2 )]
+position = Vector2( 582, 240 )
+
+[node name="GoldCoin5" parent="GoldCoin2" instance=ExtResource( 2 )]
+position = Vector2( 287, 243 )

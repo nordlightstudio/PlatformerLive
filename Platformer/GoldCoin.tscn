@@ -1,0 +1,46 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Assets/Sprites/GoldCoin/C1011.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Sprites/GoldCoin/C1012.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Sprites/GoldCoin/C1013.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Sprites/GoldCoin/C1014.png" type="Texture" id=4]
+
+[sub_resource type="GDScript" id=3]
+script/source = "#Add GoldCoin
+extends Area2D
+
+func _physics_process(delta):
+	
+	$AnimatedSprite.play(\"GoldCoin\")
+	
+	var bodies = get_overlapping_bodies()
+	for body in bodies:
+		if body.name == \"Player\":
+			get_node(\"../../../Player\").goldCoin += 1
+			queue_free()"
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "GoldCoin",
+"speed": 5.0
+} ]
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 10.9965
+
+[node name="GoldCoin" type="Area2D"]
+script = SubResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+scale = Vector2( 0.3, 0.3 )
+frames = SubResource( 1 )
+animation = "GoldCoin"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0.209, 0.223789 )
+shape = SubResource( 2 )
