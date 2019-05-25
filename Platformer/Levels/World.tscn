@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://DirtAutoTiles.tres" type="TileSet" id=1]
-[ext_resource path="res://GoldCoin.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Pickups/GoldCoin.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Traps/Trap01.tscn" type="PackedScene" id=3]
 
 [node name="World" type="Node"]
 
@@ -13,20 +14,18 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="GoldCoin2" type="Node" parent="."]
-editor/display_folded = true
+[node name="GoldCoin" type="Node" parent="."]
 
-[node name="GoldCoin" parent="GoldCoin2" instance=ExtResource( 2 )]
-position = Vector2( 631, 560 )
+[node name="GoldCoin2" parent="GoldCoin" instance=ExtResource( 2 )]
+position = Vector2( 733, 561 )
 
-[node name="GoldCoin2" parent="GoldCoin2" instance=ExtResource( 2 )]
-position = Vector2( 855, 433 )
+[node name="GoldCoin3" parent="GoldCoin" instance=ExtResource( 2 )]
+position = Vector2( 863, 432 )
 
-[node name="GoldCoin3" parent="GoldCoin2" instance=ExtResource( 2 )]
-position = Vector2( 1044, 237 )
+[node name="Traps" type="Node" parent="."]
 
-[node name="GoldCoin4" parent="GoldCoin2" instance=ExtResource( 2 )]
-position = Vector2( 582, 240 )
+[node name="Trap01" parent="Traps" instance=ExtResource( 3 )]
+position = Vector2( 645, 561 )
 
-[node name="GoldCoin5" parent="GoldCoin2" instance=ExtResource( 2 )]
-position = Vector2( 287, 243 )
+[node name="Trap02" parent="Traps" instance=ExtResource( 3 )]
+position = Vector2( 824, 624 )
