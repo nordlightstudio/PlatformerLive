@@ -14,5 +14,4 @@ func _physics_process(delta):
 			$Timer.start()
 	
 func _on_Timer_timeout():
-	print("timer ende")
 	hitPlayer = false

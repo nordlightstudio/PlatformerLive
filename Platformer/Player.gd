@@ -15,6 +15,9 @@ var testVariable = true
 #Health Player System
 var healthPlayer = 100
 onready var healthPlayerLabel = $UI/CenterContainer/VBoxContainer/Health
+#LifeBottleQuantity
+var lifeBottleQuantity = 0
+onready var lifeBottleQuantityLabel = $UI/CenterContainer/VBoxContainer/LifeBottleQuantity
 
 #Gold Coin System
 var goldCoin = 0
@@ -25,12 +28,14 @@ func _physics_process(delta):
 	
 	#Send var healthPlayer to UI
 	healthPlayerLabel.text = str("Health: ", healthPlayer)
+	#Send var lifeBottleQuantity to UI
+	lifeBottleQuantityLabel.text = str("Life Bottles: ", lifeBottleQuantity)
 	
 	#Send var goldCoin to UI
 	goldCoinLabel.text = str("Gold Coins: ", goldCoin)
 	
 	motion.y += GRAVITY
-	
+		
 	# Movement
 	if Input.is_action_pressed("ui_right"):
 		motion.x = min(motion.x+ACCELERATION, MAX_SPEED)
@@ -60,3 +65,8 @@ func _physics_process(delta):
 
 	motion = move_and_slide(motion, UP)
 	pass
+
+	# Life Bottle System
+	if Input.is_action_just_pressed("useLifeBottle") and lifeBottleQuantity > 0 and healthPlayer < 100:
+		healthPlayer += 10
+		lifeBottleQuantity -= 1

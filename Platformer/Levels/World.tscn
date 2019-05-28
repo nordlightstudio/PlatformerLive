@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://DirtAutoTiles.tres" type="TileSet" id=1]
 [ext_resource path="res://Pickups/GoldCoin.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Traps/Trap01.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Pickups/LifeBottle.tscn" type="PackedScene" id=4]
 
 [node name="World" type="Node"]
 
@@ -28,4 +29,12 @@ position = Vector2( 863, 432 )
 position = Vector2( 645, 561 )
 
 [node name="Trap02" parent="Traps" instance=ExtResource( 3 )]
-position = Vector2( 824, 624 )
+position = Vector2( 638, 238 )
+
+[node name="LifeBottle" type="Node" parent="."]
+
+[node name="LifeBottle2" parent="LifeBottle" instance=ExtResource( 4 )]
+position = Vector2( 1011, 618 )
+
+[node name="LifeBottle3" parent="LifeBottle" instance=ExtResource( 4 )]
+position = Vector2( 1065, 620 )
