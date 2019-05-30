@@ -1,0 +1,59 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://LevelMenu.gd" type="Script" id=1]
+
+[node name="LevelMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.10184
+margin_top = -3.97162
+margin_right = 4.10181
+margin_bottom = -3.97162
+script = ExtResource( 1 )
+
+[node name="Return" type="Button" parent="."]
+anchor_bottom = 1.0
+margin_top = 11.3476
+margin_right = 54.0
+margin_bottom = -328.652
+text = "Return"
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = -20.0
+margin_right = 20.0
+margin_bottom = 20.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+margin_top = 1.0
+margin_right = 120.0
+margin_bottom = 39.0
+
+[node name="Titel" type="Label" parent="CenterContainer/VBoxContainer"]
+margin_right = 120.0
+margin_bottom = 14.0
+text = "Level"
+align = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+margin_top = 18.0
+margin_right = 120.0
+margin_bottom = 38.0
+
+[node name="Level1" type="Button" parent="CenterContainer/VBoxContainer/HBoxContainer"]
+margin_right = 58.0
+margin_bottom = 20.0
+text = "Level 1"
+
+[node name="Level2" type="Button" parent="CenterContainer/VBoxContainer/HBoxContainer"]
+margin_left = 62.0
+margin_right = 120.0
+margin_bottom = 20.0
+text = "Level 2"
+[connection signal="pressed" from="Return" to="." method="_on_Return_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/HBoxContainer/Level1" to="." method="_on_Level1_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/HBoxContainer/Level2" to="." method="_on_Level2_pressed"]

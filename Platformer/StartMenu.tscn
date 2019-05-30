@@ -3,8 +3,8 @@
 [ext_resource path="res://StartMenu.gd" type="Script" id=1]
 
 [node name="StartMenu" type="Control"]
-editor/display_folded = true
-margin_right = 640.0
+margin_left = 2.0
+margin_right = 642.0
 margin_bottom = 360.0
 script = ExtResource( 1 )
 
@@ -21,7 +21,6 @@ text = "Copyright Nordlight Studio"
 align = 1
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
-editor/display_folded = true
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -32,30 +31,38 @@ margin_right = 33.5
 margin_bottom = 43.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
-margin_right = 67.0
-margin_bottom = 86.0
+margin_right = 86.0
+margin_bottom = 110.0
 
 [node name="Titel" type="Label" parent="CenterContainer/VBoxContainer"]
-margin_right = 67.0
+margin_right = 86.0
 margin_bottom = 14.0
 text = "Platformer"
+align = 1
 
 [node name="StartGameButton" type="Button" parent="CenterContainer/VBoxContainer"]
 margin_top = 18.0
-margin_right = 67.0
+margin_right = 86.0
 margin_bottom = 38.0
 text = "Start"
 
-[node name="SettingsButton" type="Button" parent="CenterContainer/VBoxContainer"]
+[node name="LevelMenu" type="Button" parent="CenterContainer/VBoxContainer"]
 margin_top = 42.0
-margin_right = 67.0
+margin_right = 86.0
 margin_bottom = 62.0
+text = "Level Menu"
+
+[node name="SettingsButton" type="Button" parent="CenterContainer/VBoxContainer"]
+margin_top = 66.0
+margin_right = 86.0
+margin_bottom = 86.0
 text = "Settings"
 
 [node name="QuitButton" type="Button" parent="CenterContainer/VBoxContainer"]
-margin_top = 66.0
-margin_right = 67.0
-margin_bottom = 86.0
+margin_top = 90.0
+margin_right = 86.0
+margin_bottom = 110.0
 text = "Quit"
 [connection signal="pressed" from="CenterContainer/VBoxContainer/StartGameButton" to="." method="_on_StartGameButton_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/LevelMenu" to="." method="_on_LevelMenu_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/QuitButton" to="." method="_on_QuitButton_pressed"]

@@ -30,6 +30,9 @@ func _physics_process(delta):
 	healthPlayerLabel.text = str("Health: ", healthPlayer)
 	#Send var lifeBottleQuantity to UI
 	lifeBottleQuantityLabel.text = str("Life Bottles: ", lifeBottleQuantity)
+	#Player dead
+	if healthPlayer <= 0:
+		get_tree().change_scene("res://PlayerDeadMenu.tscn")
 	
 	#Send var goldCoin to UI
 	goldCoinLabel.text = str("Gold Coins: ", goldCoin)
