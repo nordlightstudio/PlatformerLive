@@ -5,7 +5,7 @@
 [ext_resource path="res://Traps/Trap001.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Pickups/LifeBottle001.tscn" type="PackedScene" id=4]
 
-[node name="World001" type="Node"]
+[node name="World001" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 1 )
@@ -15,21 +15,21 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="GoldCoin" type="Node" parent="."]
+[node name="GoldCoin" type="Node2D" parent="."]
 
-[node name="GoldCoin" parent="GoldCoin" instance=ExtResource( 2 )]
-position = Vector2( 368.321, 620.008 )
+[node name="GoldCoin001" parent="GoldCoin" instance=ExtResource( 2 )]
+position = Vector2( 359.727, 621.235 )
 
-[node name="GoldCoin2" parent="GoldCoin" instance=ExtResource( 2 )]
-position = Vector2( 870.466, 427.253 )
+[node name="GoldCoin002" parent="GoldCoin" instance=ExtResource( 2 )]
+position = Vector2( 827.495, 623.691 )
 
-[node name="GoldCoin3" parent="GoldCoin" instance=ExtResource( 2 )]
-position = Vector2( 1096.37, 238.181 )
+[node name="GoldCoin003" parent="GoldCoin" instance=ExtResource( 2 )]
+position = Vector2( 872.922, 433.392 )
 
-[node name="GoldCoin4" parent="GoldCoin" instance=ExtResource( 2 )]
-position = Vector2( 284.835, 238.181 )
+[node name="GoldCoin004" parent="GoldCoin" instance=ExtResource( 2 )]
+position = Vector2( 236.953, 540.205 )
 
-[node name="Traps" type="Node" parent="."]
+[node name="Traps" type="Node2D" parent="."]
 
 [node name="Trap001" parent="Traps" instance=ExtResource( 3 )]
 position = Vector2( 460.402, 624.919 )
@@ -40,7 +40,7 @@ position = Vector2( 643.335, 558.621 )
 [node name="Trap003" parent="Traps" instance=ExtResource( 3 )]
 position = Vector2( 651.929, 239.409 )
 
-[node name="LifeBottle" type="Node" parent="."]
+[node name="LifeBottle" type="Node2D" parent="."]
 
 [node name="LifeBottle001" parent="LifeBottle" instance=ExtResource( 4 )]
 position = Vector2( 725.593, 561.076 )

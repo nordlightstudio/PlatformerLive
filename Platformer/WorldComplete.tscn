@@ -7,7 +7,6 @@
 extents = Vector2( 16, 16 )
 
 [node name="WorldComplete" type="Area2D"]
-editor/display_folded = true
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true

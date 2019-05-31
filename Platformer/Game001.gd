@@ -2,7 +2,7 @@
 extends Node2D
 
 # Variavlen für die Level-Welten
-var LevelWorld001
+var LevelWorld001 
 var LevelWorld002
 
 # Wenn alles fertig geladen
@@ -23,7 +23,7 @@ func show_World001():
     
     #World002 ausblenden / verstecken
     LevelWorld002.visible = false
-    
+
 # Eine Funktion für das Anzeigen der 2. Welt
 func show_World002():
     #World002 anzeigen
