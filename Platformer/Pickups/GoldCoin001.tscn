@@ -31,7 +31,7 @@ animations = [ {
 [sub_resource type="CircleShape2D" id=3]
 radius = 10.9965
 
-[node name="GoldCoin" type="Area2D"]
+[node name="GoldCoin001" type="Area2D"]
 script = SubResource( 1 )
 __meta__ = {
 "_edit_group_": true

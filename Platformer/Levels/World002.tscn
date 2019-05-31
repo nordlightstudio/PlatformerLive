@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://DirtAutoTiles.tres" type="TileSet" id=1]
-[ext_resource path="res://Pickups/GoldCoin.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Pickups/GoldCoin001.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Traps/Trap001.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Pickups/LifeBottle.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Pickups/LifeBottle001.tscn" type="PackedScene" id=4]
 
 [node name="World002" type="Node"]
 
@@ -17,24 +17,39 @@ __meta__ = {
 
 [node name="GoldCoin" type="Node" parent="."]
 
+[node name="GoldCoin" parent="GoldCoin" instance=ExtResource( 2 )]
+position = Vector2( 407, 432 )
+
 [node name="GoldCoin2" parent="GoldCoin" instance=ExtResource( 2 )]
-position = Vector2( 396.599, 432.087 )
+position = Vector2( 722, 301 )
 
 [node name="GoldCoin3" parent="GoldCoin" instance=ExtResource( 2 )]
-position = Vector2( 730.404, 303.087 )
+position = Vector2( 1061, 175 )
 
 [node name="Traps" type="Node" parent="."]
 
-[node name="Trap01" parent="Traps" instance=ExtResource( 3 )]
-position = Vector2( 493.988, 626.07 )
+[node name="Trap001" parent="Traps" instance=ExtResource( 3 )]
+position = Vector2( 495, 624 )
 
-[node name="Trap02" parent="Traps" instance=ExtResource( 3 )]
-position = Vector2( 590.118, 625.966 )
+[node name="Trap002" parent="Traps" instance=ExtResource( 3 )]
+position = Vector2( 591, 624 )
+
+[node name="Trap003" parent="Traps" instance=ExtResource( 3 )]
+position = Vector2( 686, 624 )
+
+[node name="Trap004" parent="Traps" instance=ExtResource( 3 )]
+position = Vector2( 781, 624 )
+
+[node name="Trap005" parent="Traps" instance=ExtResource( 3 )]
+position = Vector2( 876, 624 )
+
+[node name="Trap006" parent="Traps" instance=ExtResource( 3 )]
+position = Vector2( 971, 624 )
+
+[node name="Trap007" parent="Traps" instance=ExtResource( 3 )]
+position = Vector2( 1067, 623 )
 
 [node name="LifeBottle" type="Node" parent="."]
 
-[node name="LifeBottle2" parent="LifeBottle" instance=ExtResource( 4 )]
-position = Vector2( 242.434, 616.772 )
-
-[node name="LifeBottle3" parent="LifeBottle" instance=ExtResource( 4 )]
-position = Vector2( 916.443, 175.558 )
+[node name="LifeBottle001" parent="LifeBottle" instance=ExtResource( 4 )]
+position = Vector2( 898, 178 )
