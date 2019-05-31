@@ -2,10 +2,10 @@
 
 [ext_resource path="res://DirtAutoTiles.tres" type="TileSet" id=1]
 [ext_resource path="res://Pickups/GoldCoin.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Traps/Trap01.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Traps/Trap001.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Pickups/LifeBottle.tscn" type="PackedScene" id=4]
 
-[node name="World1" type="Node"]
+[node name="World002" type="Node"]
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 1 )
