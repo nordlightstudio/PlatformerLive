@@ -16,7 +16,7 @@ func _physics_process(delta):
 	var bodies = get_overlapping_bodies()
 	for body in bodies:
 		if body.name == \"Player001\":
-			get_node(\"../../../../Player001\").goldCoin += 1
+			get_node(\"res://Player001.gd\").goldCoin += 1
 			queue_free()
 "
 
