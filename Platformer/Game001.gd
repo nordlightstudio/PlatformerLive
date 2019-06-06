@@ -4,6 +4,7 @@ extends Node2D
 #Laden der Level-Szenen im vorraus
 var level1_scene = preload("res://Levels/World001.tscn")
 var level2_scene = preload("res://Levels/World002.tscn")
+var level3_scene = preload("res://LevelMenu.tscn")
 
 # Wenn alles fertig geladen
 func _ready():
@@ -13,9 +14,9 @@ func _ready():
 func load_level(level):
     
     #Prüfen ob schon ein Level geladen ist
-    if has_node("Level"):
+    if has_node("level_scene"):
         #Wenn ja, Level löschen
-        get_node("Level").queue_free()
+        get_node("level_scene").queue_free()
        
     var level_scene
     
@@ -24,9 +25,11 @@ func load_level(level):
             level_scene = level1_scene.instance()
         2:
             level_scene = level2_scene.instance()
+        3:
+            level_scene = level3_scene.instance()
 
 	#Start Position Player001 festlegen
-    $Player001.global_position = level_scene.get_node("StartPositionPlayer").global_position
+    #$Player001.global_position = level_scene.get_node("StartPositionPlayer").global_position
 
     add_child(level_scene)
 
