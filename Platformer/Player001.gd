@@ -14,14 +14,16 @@ var testVariable = true
 
 #Health Player System
 var healthPlayer = 100
-onready var healthPlayerLabel = $UI/CenterContainer/VBoxContainer/Health
+#onready var healthPlayerLabel = $UI/CenterContainer/VBoxContainer/Health
+onready var healthPlayerLabel = get_node("/root/Game001/CanvasLayer/UI/CenterContainer/VBoxContainer/Health")
+
 #LifeBottleQuantity
 var lifeBottleQuantity = 0
-onready var lifeBottleQuantityLabel = $UI/CenterContainer/VBoxContainer/LifeBottleQuantity
+onready var lifeBottleQuantityLabel = get_node("/root/Game001/CanvasLayer/UI/CenterContainer/VBoxContainer/LifeBottleQuantity")
 
 #Gold Coin System
 var goldCoin = 0
-onready var goldCoinLabel = $UI/CenterContainer/VBoxContainer/GoldCoin
+onready var goldCoinLabel = get_node("/root/Game001/CanvasLayer/UI/CenterContainer/VBoxContainer/GoldCoin")
 
 # Physic Process
 func _physics_process(delta):
