@@ -9,7 +9,7 @@
 [node name="World002" type="Node2D"]
 
 [node name="StartPositionPlayer" type="Position2D" parent="."]
-position = Vector2( 182, 581 )
+position = Vector2( 163.384, 578.136 )
 
 [node name="WorldComplete" parent="." instance=ExtResource( 1 )]
 position = Vector2( 1104.05, 164.677 )
