@@ -19,6 +19,10 @@ config/name="Plattformer"
 run/main_scene="res://Game001.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Global="*res://Global.tscn"
+
 [display]
 
 window/size/width=640

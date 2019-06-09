@@ -5,7 +5,6 @@ extends Node2D
 var level_scenes = [
         preload("res://Levels/World001.tscn"),
         preload("res://Levels/World002.tscn"),
-        preload("res://LevelMenu.tscn")
         ]
         
 var current_level
@@ -13,7 +12,7 @@ var current_level
 # Wenn alles fertig geladen
 func _ready():
     #ersten level laden
-    load_level(1)
+    load_level(Global.current_level_counter)
     
     
 func load_level(level):
